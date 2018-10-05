@@ -23,7 +23,7 @@
 </dependencies>
 
 <build>
-<finalName>Contacts-Api</finalName>
+<finalName>Contacts-Api-0.0.1-SNAPSHOT</finalName>
 <testResources>
       <testResource>
         <directory>Contacts-Api/target/Dockerfile</directory>
