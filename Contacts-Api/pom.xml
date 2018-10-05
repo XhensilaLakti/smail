@@ -24,6 +24,13 @@
 
 <build>
 <finalName>Contacts-Api</finalName>
+<testResources>
+      <testResource>
+        <directory>Contacts-Api/target/Dockerfile</directory>
+        <filtering>false</filtering>
+       
+      </testResource>
+      </testResources>
 <plugins>
 <plugin>
 	<groupId>org.springframework.boot</groupId>
