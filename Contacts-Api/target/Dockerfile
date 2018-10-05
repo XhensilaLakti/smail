@@ -1,4 +1,4 @@
 FROM java:8
 EXPOSE 8080:8080
-ADD target/Api.jar Api.jar
-ENTRYPOINT ["java","-jar","Api.jar"]
+ADD target/Contacts-Api.jar Contacts-Api.jar
+ENTRYPOINT ["java","-jar","Contacts-Api.jar"]
