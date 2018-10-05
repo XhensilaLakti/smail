@@ -22,13 +22,17 @@
 </dependency>
 </dependencies>
 
-
 <build>
-
-<finalName>Contacts-Api</finalName>
-
+<plugins>
+<plugin>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-maven-plugin</artifactId>
+	<configuration>
+		<executable>true</executable>
+	</configuration>
+</plugin>
+</plugins>
 </build>
-
 
 <properties>
 <java.version>1.8</java.version>
