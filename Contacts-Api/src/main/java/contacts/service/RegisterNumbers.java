@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +32,12 @@ public class RegisterNumbers {
 		 kontakte.add(kontakt);
 		 
 	    }*/
-		 File file=new File("C:\\Users\\jorina.sinjaritest\\Desktop\\phoneBook.csv");
-		    Scanner br=new Scanner(new FileReader(file));
+		 
+		 ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+		 InputStream input = classLoader.getResourceAsStream("phoneBook.csv");
+
+		 //File file=new File(input);
+		    Scanner br=new Scanner(input);
 
 				String i;
 				
