@@ -43,7 +43,7 @@ public class ContactController {
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT,value="/updateContact/{name}")
-	public void  updateContact(@RequestBody ListaEKontakteve kontakt,@PathVariable String name) 
+	public void  updateContact(@RequestBody ListaEKontakteve kontakt,@PathVariable String name) throws FileNotFoundException 
 	{
 		registerNumbers.updateContact(kontakt,name);
 		
