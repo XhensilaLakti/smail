@@ -20,11 +20,10 @@ public class Main {
 		FacebookClient fbClient = new DefaultFacebookClient(stringAccess,Version.VERSION_3_1);
 		User me =fbClient.fetchObject("me", User.class);
 		AccessToken exAccessToken =fbClient.obtainExtendedAccessToken("155008352113494","ec53c601d70c654bb93ab389fbb75e20");
-		Connection <Page> results=fbClient.fetchConnection("me/feed", Page.class);
-		Connection <Post> result=fbClient.fetchConnection("me/accounts", Post.class);
-		Connection <User> rezultati=fbClient.fetchConnection("search", User.class,Parameter.with("q", "xhensila"),Parameter.with("type", "user"));
+		Connection <Post> results=fbClient.fetchConnection("me/feed", Post.class);
+		
 		int counter=0;
-		for(List<Post> page:result)
+		for(List<Post> page:results)
 		
 		{for(Post aPost:page)
 		{ System.out.println(aPost.getMessage());
@@ -35,28 +34,8 @@ public class Main {
 		}
 			
 		}
-		for(List<Page> page:results)
-			
-		{for(Page aPost:page)
-		{ System.out.println(aPost.getName());
-		 System.out.println("fb.com/"+aPost.getId());
-		 counter++;
 		
-			
-		}
-			
-		}
-	
-		for(List<User> page:rezultati)
-			
-		{for(User aPost:page)
-		{ System.out.println(aPost.getName());
-		 System.out.println("fb.com/"+aPost.getId());
-		 counter++;
 		
-			
-		}
-		}
 		if (counter>100)
 		 {System.out.println( "You are an active user on Facebook");
 		System.out.println("Number of posts :"+counter);
