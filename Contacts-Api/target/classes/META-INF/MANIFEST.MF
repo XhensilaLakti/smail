@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Implementation-Title: Api
-Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Version: 1.0.0-SNAPSHOT
 Built-By: xhensila.lakti
 Implementation-Vendor-Id: io.javabrains.springbootquickstart.api
 Build-Jdk: 1.8.0_181
