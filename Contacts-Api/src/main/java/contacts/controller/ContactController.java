@@ -65,7 +65,7 @@ public class ContactController {
 		registerNumbers.deleteContact(name);
 		
 	}
-	@RequestMapping(method=RequestMethod.GET,value="/me/feed")
+	@RequestMapping(method=RequestMethod.POST,value="/me/feed")
 	public  List<String> fbFeed() {
 		String stringAccess="EAACMZBrHD01YBAM5QgJBZA6X4kqkj3o1VRQKZBKwTGXUpWOQRTXzLpEFlZCZBBY4XYTNJ9WjlfL1wBnTOvTeEfs9BRh5wMX79srbMLeLaA4dVagDGLJ1FQnZCUE5ZCn0MBwsAEGXZA3uudyxbjzB1xmec1ZA4b8dpzUNhhu9OhNWbDgZDZD";
 		
@@ -92,4 +92,8 @@ public class ContactController {
 	
 
 }
+	@RequestMapping(method=RequestMethod.POST,value="/xheni")
+	public String xheni(){
+		return "xheni";
+	}
 }
